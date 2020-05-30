@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chat | KaKao Clone</title>
+    <script
+      src="https://kit.fontawesome.com/46e72ffc5c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="status-bar">
+      <!--  (. + 클래스명 하면 왼쪽처럼 나타남)-->
+      <div class="status-bar__column">
+        <span class="status-bar__clock"> 13:53 </span>
+      </div>
+      <!-- (.+ 클래스명 + * 횟수  횟수만큼 나타남 ) -->
+
+      <div class="status-bar__column"></div>
+      <!-- (__분리하는 의미.   status-bar(부모) 와 status-bar__column(자식)관계 )-->
+      <i class="far fa-clock"></i>
+      <i class="fas fa-volume-mute"></i>
+      <i class="fas fa-wifi"></i>
+      <span class="status-bar__battery-level">97%</span>
+      <i class="fas fa-battery-three-quarters"></i>
+    </div>
+
+    <header class="header">
+      <div class="header__column">
+        <a href="index.html">
+          <i class="fas fa-arrow-left fa-2x"></i>
+        </a>
+        <h1 class="header__title">best Friend</h1>
+      </div>
+      <div class="header__column">
+        <span class="header__icon">
+          <i class="fas fa-search"></i>
+        </span>
+        <span class="header__icon">
+          <i class="fas fa-bars"></i>
+        </span>
+      </div>
+    </header>
+    <main class="chat">
+      <ul class="chat__messages">
+        <span class="chat__timestamp">Friday,May 30,2020</span>
+        <li class="incoming__message message"></li>
+        <img src="images/avatar.jpg" class="g-avatar" />
+        <span class="message__author">Best Friend</span>
+        <div class="message__content">
+          <div class="message__bubble">Hi, how`s going?</div>
+        </div>
+        <span class="message__timestamp">15:32</span>
+
+        <li class="incoming__message message"></li>
+        <span class="message__timestamp">15:32</span>
+        <div class="message__content">
+          <div class="message__bubble">I`m good. how are you?</div>
+        </div>
+      </ul>
+    </main>
+    <div class="chat__write">
+      <div class="chat__column">
+        <i class="far fa-plus-square"></i>
+      </div>
+
+      <div class="chat__column">
+        <input
+          type="text"
+          placeholder="Send message"
+          class="chat__write-input"
+        />
+      </div>
+
+      <div class="chat__column">
+        <span class="chat__write-icon"><i class="far fa-laugh"></i></span>
+        <span class="chat__write-icon"><i class="fas fa-microphone"></i> </span>
+      </div>
+    </div>
+  </body>
+</html>

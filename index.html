@@ -1,0 +1,112 @@
+<!-- index : 제일 처음에 나타나는 페이지. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats | KaKao Clone</title>
+    <script
+      src="https://kit.fontawesome.com/46e72ffc5c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="status-bar">
+      <!--  (. + 클래스명 하면 왼쪽처럼 나타남)-->
+      <div class="status-bar__column">
+        <span class="status-bar__clock"> 13:53 </span>
+      </div>
+      <!-- (.+ 클래스명 + * 횟수  횟수만큼 나타남 ) -->
+
+      <div class="status-bar__column"></div>
+      <!-- (__분리하는 의미.   status-bar(부모) 와 status-bar__column(자식)관계 )-->
+      <i class="far fa-clock"></i>
+      <i class="fas fa-volume-mute"></i>
+      <i class="fas fa-wifi"></i>
+      <span class="status-bar__battery-level">97%</span>
+      <i class="fas fa-battery-three-quarters"></i>
+    </div>
+
+    <header class="header">
+      <div class="header__column">
+        <h1 class="header__title">Chats</h1>
+      </div>
+      <div class="header__column">
+        <span class="header__icon"><i class="fas fa-search"></i></span>
+        <!--  span을 사용해줌으로써, 사이사이 공간을 만든다.-->
+        <span class="header__icon"><i class="far fa-comment"></i></span>
+        <span class="header__icon"><i class="fas fa-cog"></i></span>
+      </div>
+    </header>
+
+    <main class="chats">
+      <ul class="chats__list">
+        <a href="chat.html">
+          <li class="chats__chat">
+            <div class="chat__column">
+              <img class="chat__avatar g-avartar" src="images/avatar.jpg" />
+              <div class="chat__content">
+                <span class="chat__username">Chiman</span>
+                <span class="chat__preview">what`s going on? </span>
+              </div>
+            </div>
+            <div class="chat__column">
+              <span class="chat__timestamp">Yesterday</span>
+            </div>
+          </li>
+        </a>
+      </ul>
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__list-item">
+          <a href="friends.html" class="nav__list-link">
+            <i class="far fa-user"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="index.html" class="nav__list-link">
+            <i class="fas fa-comment"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="find.html" class="nav__list-link">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="more.html" class="nav__list-link">
+            <i class="fas fa-ellipsis-h"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
+
+<!--  -->
+
+<!-- (아이콘 사용법)
+    1. Font Awesome 홈페이지 접속
+    2. 무료로 된버튼 클릭후 링크를 복사후  head부분에 붙혀넣기.(import 해줌)
+    3. 원하는 아이콘 검색후(무료로 된거) 코드를 복사해서 원하는 자리에 붙혀넣기.
+
+
+    ul 리스트의 틀을 만들기위해 사용
+    li 각 리스트를 만들기위해 ul과 li는 한몸
+
+    빠르게 만들기 할때는 항상 마지막엔.찍기 
+    nav의 클래스명 빠르게 만들기         . + 클래스명 ex) .first.     => <div class="first"></div>
+    같은테그 여러개 만들기              . + * 개수  ex) span.first*3.   =><span class="first"></span>  3개 나타남.
+    ul or li or h1 등 빠르게 만들기    ul. + 클래스명 ex) ul.first. => <ul class="first"></ul>
+    링크 바로가기 빠르게 만들기          a. + 클래스명 ex)a.first.     => <a href="" class="first"></a>
+    어떤 테그 안에 다른테크를 넣고싶을때    li + > + a.클래스명 ex)     => <li><a href="" class="first"></a></li>
+
+    (이미지 삽입법)
+    <img + class명 + src(사진을 불러오는 장소) = ""    =>     <img class="chat__avatar" src="images/avatar.jpg" />
+
+    (텍스트(글짜) 삽입법)
+    <input type="" placeholder="" class="">   ex)=> <input type="text" placeholder="Password" class="input"> 
+-->

@@ -1,0 +1,113 @@
+<!-- index : 제일 처음에 나타나는 페이지. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friends | KaKao Clone</title>
+    <script
+      src="https://kit.fontawesome.com/46e72ffc5c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="status-bar">
+      <!--  (. + 클래스명 하면 왼쪽처럼 나타남)-->
+      <div class="status-bar__column">
+        <span class="status-bar__clock"> 13:53 </span>
+      </div>
+      <!-- (.+ 클래스명 + * 횟수  횟수만큼 나타남 ) -->
+
+      <div class="status-bar__column"></div>
+      <!-- (__분리하는 의미.   status-bar(부모) 와 status-bar__column(자식)관계 )-->
+      <i class="far fa-clock"></i>
+      <i class="fas fa-volume-mute"></i>
+      <i class="fas fa-wifi"></i>
+      <span class="status-bar__battery-level">97%</span>
+      <i class="fas fa-battery-three-quarters"></i>
+    </div>
+
+    <header class="header">
+      <div class="header__column">
+        <h1 class="header__title">Friends</h1>
+      </div>
+      <div class="header__column">
+        <span class="header__icon"><i class="fas fa-search"></i></span>
+        <!--  span을 사용해줌으로써, 사이사이 공간을 만든다.-->
+        <span class="header__icon"><i class="far fa-comment"></i></span>
+        <span class="header__icon"><i class="fas fa-cog"></i></span>
+      </div>
+    </header>
+
+    <main class="friends">
+      <header class="friends__header">
+        <div class="friends__friend friend friend--lg">
+          <div class="friend__column">
+            <img src="images/avatar.jpg" class="g-avatar friend" />
+            <div class="frined__content">
+              <span class="frined__username">김치환</span>
+              <span class="friend__status">여행가고싶다.</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="friends__plus">
+        <h5 class="friends__title">Plus friend</h5>
+        <div class="friend column">
+          <div class="friends__friend friend">
+            <img src="images/avatar.jpg" class="g-avatar friend" />
+            <div class="frined__content">
+              <span class="frined__username">Plus frined</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="friends__list">
+        <h5 class="friends__title">Friends 300</h5>
+        <li class="friends__friend friend">
+          <div class="friend__column">
+            <img src="images/avatar.jpg" class="g-avatar friend" />
+            <div class="frined__content">
+              <span class="frined__username">김치환</span>
+              <span class="friend__status">여행가고싶다.</span>
+            </div>
+            <div class="friend__column">
+              <div class="frined__now-listening">
+                <span>IU 무릎</span>
+                <span> <i class="far fa-play-circle"></i></span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__list-item">
+          <a href="friends.html" class="nav__list-link">
+            <i class="fas fa-user"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="index.html" class="nav__list-link">
+            <i class="far fa-comment"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="find.html" class="nav__list-link">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="more.html" class="nav__list-link">
+            <i class="fas fa-ellipsis-h"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
