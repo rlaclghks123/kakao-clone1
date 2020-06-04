@@ -1,0 +1,185 @@
+.box {
+  background-color: tomato;
+  width: 50px;
+  height: 50px;
+  animation: turn-box 5s ease-in-out;
+}
+
+@keyframes turn-box {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: rotate(5turn) scale(0.5, 0.5);
+  }
+  50% {
+    transform: none;
+  }
+  100% {
+    transform: rotate(5turn) scale(0.5, 0.5);
+  }
+}
+
+/* 
+    <css 사용법>
+        원하는 테그 + { 바꾸고 싶은것 + : + 요소 + ; } 
+        h1 {
+                color: skyblue;
+            }
+
+        클래스 명을 사용하고 싶으면
+        원하는 테그 + . + 클래스명 + { 바꾸고 싶은것 + : + 요소 + ; } 
+        
+            ex)div.first {
+        background-color: purple;
+        }
+
+    <margin,border,padding>
+
+        margin: 경계선 보다 바깥쪽
+        border : 경계선
+        padding : 경계선 보다 안쪽
+
+        (상하좌우 다 사용할 경우)
+        margin: 50px; or margin: 50px 25px 10px 5px; (시계방향 상 좌 하 우)
+
+        (상하 좌우만 사용할경우)
+        margin: 50px 20px;
+
+        border-width :  경계선 폭
+        border-style : 경계선 스타일 solid(실선),dashed(점선)
+        (단축기)
+        border: 5px solid red; (폭,스타일,색상)
+
+    (display :  block, inline-block, inline)
+    
+        blcok: 박스형태로, 넓이,높이를 가지며, 옆에 다른 요소를 놓을수가없음. 
+                                ㅁ
+                                ㅁ
+                                ㅁ    이런느낌
+        inline-block : 박스형태로 넓이,높이를 가지며, 옆에 다른 요소를 놓을수가 있음.
+                            ㅁㅁㅁ 이런느낌 
+        inline : 넓이,높이를 가질수없으며, 텍스트와 같다. 
+                                111   이런느낌 
+
+    <position>
+        posision : static,fixed,absolute,relative 
+                static : 기본적인 값, 스크롤을 하면 같이 따라가지않고 사라짐
+                fixed : 스크롤을 해도 고정되어서 따라옴.
+                absolute : 부모의 설정을 없애버림. 그래서 부모가 body로 지정됨.
+                relative : absolute의 부모로 지정하기위해 사용.
+
+    <display : flex>
+        부모클래스에 적용하여, 자녀클래스를 정렬하게 만드는 역할을한다.
+        flex를 적용시킨후, 
+
+        <flex-direction : row   : 가로방향으로 정렬> , row-reverse
+        <flex-direction : column : 세로방향으로 정렬> , column-reverse
+            <flex-direction : row 일때>
+                justify-content : center  =>  가로축에서 중간으로 이동시킴. 
+                justify-content : space-between => 가로축에서 같은간격으로 정렬시킴.
+                justify-content : space-around => 가로축에서 중심을 기준 좌우 대칭으로 시킴. 주변부분에도 같은간격으로 정렬.
+                
+                align-items : center       =>세로축에서 중간으로 이동시킴. 
+                align-items : flex-end     =>세로축에서 아래로 이동시킴
+                align-items : flex-start    =>세로축에서 위로 이동시킴
+
+            <flex-direction : column 일땐 > 
+                justify-content : 세로축
+                align-item : 가로축으로 바뀜. 
+            
+            <flex-wrap : no-wrap>
+                no-wrap : 창이 줄어들면 그거에 맞게 같이 작아지는것.
+                wrap : 창이 줄어들면 점점 사라지는것.
+                기본값은 flex-wrap이다.
+
+
+    <가상 셀렉터>
+        1. ex) <input type="Hello"> 인경우
+                css창에서, input[type="Hello"] {
+                 background-color: red; }   이렇게 사용가능. 
+
+        2. ex) <input type="Hello" required="Hi"> 인경우
+                css창에서, input[required="Hi"] {
+                 background-color: red; }   이렇게 사용가능. 
+
+        3. 박스가 여러개일때 박스를 어떻게 고르냐?
+           ex) .box: first-child {background-color: red;}
+               .box: last-child {background-color: red;} 
+               .box: ntn-child(2n+1) {background-color: red;} 
+    
+        4. 박스를 여러개 선택할때 
+            ex) .box + .child-box 
+            ex) .box>.child-box 
+
+    <hover,active,focus,>
+         hover : 그 부분에 마우스를 가져다 될때 작동하는것
+         active: 클릭했을때 작동하는것.
+         focus : 클릭해서 무엇인가를 할때.
+         ex) 원하는것 + : {}
+             .box:hover {background-color}
+
+    <transition>
+     hover,active,focus등을 할때 변화효과를 주느것. 
+      사용법 :  .box:hover{
+             transition : 원하는요소  시간  사용할효과}
+     ex).box:hover{
+         transition : all 5s ease-in-out;}
+
+    <transform>
+    각도를 움직이거나(몇바퀴 돌릴수도있음), 크기를 작게하거나 할수있음.
+    ex) .box:hover{
+        transform : rotate(45deg) or rotate(2turn)
+    
+    ex2)  transition이랑 같이사용법 
+            .box{
+                transition: transform 2s ease-in-out}
+            
+                .box:hover{
+             transform : rotate(2turn)}
+   
+    ex3) 크기를 작게하는법 
+     .box:hover{
+             transform : rotate(2turn) scale: (0.5s , 0.5s);}
+     
+    
+    <animation>
+    
+            anymation을 만들어서 그걸 지정해서 사용하면됨.
+
+             animation: 시간  지정한 이름   사용할효과 ;
+              ex) animation: 2s animation-practice ease-in-out;
+        (anymation을 만드는방법) 
+            @keyframes + 원하는이름{
+                transform : rotate(2turn);
+            }
+        (시작지점과 끝지점 from , to 를 사용)
+            ex)
+             @keyframes father-box {
+                 from{
+                     transform:none;
+                 }
+                 to{
+                     transform: rotate(2turn) scale(0.5, 0.5);
+                 }
+                }
+        (반복사용)
+        @keyframes father-box {
+                 0%{
+                     transform:none;
+                 }
+                 50%{
+                     transform: rotate(2turn) scale(0.5, 0.5);
+                 }
+                 100%{
+                     transform: none;
+                 }
+
+                }   
+    <media query>
+    모바일, 컴퓨터, 테블릿PC등 상황에맞춰서 화면을 조정하는방법
+    아래의 코드를 css에 body에 적용시켜준다.
+        @media screen and(min-width:300px) and (max-width:640px){
+            background-color:blue
+        }            
+        */
